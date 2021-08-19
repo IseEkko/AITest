@@ -11,9 +11,9 @@ class TestController extends Controller
 {
     public static function Change(Request $request){
         // 您的AccessKeyID
-        $accessKeyId = "LTAI5tFWNMGyG7DX4NSNk5NS";
+        $accessKeyId = "";
         // 您的AccessKeySecret
-        $accessKeySecret = "n7ysxjvuzgA9LFvpM6fy8Ip7JNBi4Q";
+        $accessKeySecret = "";
         // 要上传的文件路径，url 或 filePath
         $fileUrl =$request["url"];
         // 上传成功后，返回上传后的文件地址
@@ -45,7 +45,7 @@ class TestController extends Controller
      * @return void
      */
     public static function Test(Request $request){
-        $client = self::createClient("LTAI5tFWNMGyG7DX4NSNk5NS", "n7ysxjvuzgA9LFvpM6fy8Ip7JNBi4Q");
+        $client = self::createClient("", "");
         $recognizeExpressionRequest = new RecognizeExpressionRequest([
             "imageURL" => "$request[url]"
         ]);
